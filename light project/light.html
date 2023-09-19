@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light turn off | turn on project</title>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+           
+        }
+        #btn{
+            background-color: green;
+            padding: 12px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <img src="images/bulb-off.jpg" alt="" class="center" id="img1">
+    <button class="center" id="btn">Turn On</button>
+    <script>
+        const button = document.querySelector('#btn')
+        const image = document.getElementById('img1')
+        image.class = "center222"
+        button.addEventListener('click',toggleBtn);
+        // console.log(button)
+        function toggleBtn(e){
+            if(button.textContent==='Turn On'){
+                image.src = "images/bulb-on.png";
+                // image.setAttribute('src','images/bulb-on.png')
+                button.textContent='Turn Off'
+                button.style.backgroundColor='red'
+
+            }
+            else{
+                image.src="images/bulb-off.jpg"
+                button.textContent='Turn On'
+                button.style.backgroundColor='green'
+
+            }
+
+            // console.log(e)
+        }
+    </script>
+</body>
+
+</html>
